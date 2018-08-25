@@ -6,18 +6,30 @@
 		<title> ¯\_(ツ)_/¯ </title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link rel="stylesheet" href="dist/css/main.css">
 	</head>
 	<body>
 		
-		<div class="content">
-			Search<input class="searchField" type="text"><button>Submit</button>
+		<div id="app">
+				<user-input :game="game"></user-input>
+		<!-- 		<select id="pet-select">
+				    <option value="">--Pick a genre--</option>
+				    <option value="adventure">Adventure</option>
+				    <option value="sci-fi">Sci-fi</option>
+				    <option value="fantasy">Fantasy</option>
+				    <option value="action">Action</option>
+				    <option value="role-playing">Role-playing</option>
+				    <option value="sports">Sports</option>
+				    <option value="strategy">Strategy</option>
+				</select> -->
+			<!-- </div> -->
 		</div>
 
 		
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="dist/js/game-search.js"></script>
 		<script src="dist/js/main.js"></script>
 
 	</body>
