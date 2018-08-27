@@ -2,27 +2,52 @@
 
 console.log("Vue-Final");
 
-var IGDB_SEARCH_URL = "http://circuslabs.net/proxies/igdb/?user-key=91cfde4de28e4fb338abbedd15dc86b5&endpoint=/games/?search=halo&fields=name,genres,rating,screenshots,summary";
-// const TEST = ("http://circuslabs.net/proxies/igdb/?user-key=91cfde4de28e4fb338abbedd15dc86b5&endpoint=/genres/?search=1&fields=name")
-
+var randomNumber = Math.floor(Math.random() * 100000 + 1);
+console.log(randomNumber);
+var IGDB_SEARCH_URL = "http://circuslabs.net/proxies/igdb/\n\t?user-key=91cfde4de28e4fb338abbedd15dc86b5&endpoint=/\n\tgames/" + randomNumber + "?fields=name,genres,rating,screenshots,summary,rating";
 
 var app = new Vue({
 	el: "#app",
 	data: {
-		gameData: [],
-		game: ''
+		gameData: []
 	},
-	created: function created() {
-		var _this = this;
+	methods: {
+		getdata: function getdata() {
+			var _this = this;
 
-		axios.get(IGDB_SEARCH_URL).then(function (response) {
-			console.log("IGDB responded with", response.data);
-			_this.gameData = response.data;
-		}).catch(function (error) {
-			console.warn("not working", error);
-		});
+			axios.get(IGDB_SEARCH_URL).then(function (response) {
+				console.log("IGDB responded with", response.data);
+				_this.gameData = response.data;
+			}).catch(function (error) {
+				console.warn("not working", error);
+			});
+		}
+
 	}
 });
+
+//  const IGDB_GENRE_URL = (`http://circuslabs.net/proxies/igdb/?user-key=91cfde4de28e4fb338abbedd15dc86b5&endpoint=/genres/?search=1&fields=name`)
+
+// var app = new Vue ({
+// 	el: "#app",
+// 	data: {
+// 		genreData: [],
+// 		game: '',
+
+// 	},
+// 	created: function() {
+// 		axios
+// 			.get(IGDB_GENRE_URL)
+// 	  		.then((response) => {
+// 	  			console.log("GENRE DATA", response.data)
+// 	  			this.genreData = response.data; 
+// 	  		})
+// 	  		.catch((error) => {
+// 	  			console.warn("not working", error);
+// 	  		})
+// 	},
+// })
+
 // let YOUR_KEY = "91cfde4de28e4fb338abbedd15dc86b5";
 // let searchField = document.querySelector('.searchField');
 // let submitBtn = document.querySelector('button');

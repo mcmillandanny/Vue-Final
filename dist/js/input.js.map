@@ -1,1 +1,0 @@
-{"version":3,"sources":["input.js"],"names":["app","Vue","el","data","gameSearch"],"mappings":";;AAAA,IAAIA,MAAM,IAAIC,GAAJ,CAAQ;AAChBC,MAAI,MADY;AAEhBC,QAAM;AACJC,gBAAYA;AADR;AAFU,CAAR,CAAV","file":"input.js","sourcesContent":["var app = new Vue({\n  el: '#app',\n  data: {\n    gameSearch: gameSearch\n  }\n})"]}

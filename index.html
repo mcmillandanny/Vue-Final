@@ -12,25 +12,16 @@
 	<body>
 		
 		<div id="app">
-				<user-input :game="game"></user-input>
-		<!-- 		<select id="pet-select">
-				    <option value="">--Pick a genre--</option>
-				    <option value="adventure">Adventure</option>
-				    <option value="sci-fi">Sci-fi</option>
-				    <option value="fantasy">Fantasy</option>
-				    <option value="action">Action</option>
-				    <option value="role-playing">Role-playing</option>
-				    <option value="sports">Sports</option>
-				    <option value="strategy">Strategy</option>
-				</select> -->
-			<!-- </div> -->
+			<button v-on:click="getdata">Search For Random Game</button>
+			<game-feed v-bind:game-data="gameData"></game-feed>
 		</div>
 
 		
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-		<script src="dist/js/game-search.js"></script>
+		<script src="dist/js/genreFeed.js"></script>
+		<script src="dist/js/getGenreData.js"></script>
 		<script src="dist/js/main.js"></script>
-
+		
 	</body>
 </html>
