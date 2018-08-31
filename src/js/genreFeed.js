@@ -8,7 +8,7 @@ Vue.component('genre', {
   			<div>
   				<p>{{gameObject.name}}</p>
   				<p>{{gameObject.summary}}</p>
-  				<p>{{gameObject.rating}}</p>		
+  				<p>{{gameObject.rating}}</p>
   			</div>
   			`
 })
