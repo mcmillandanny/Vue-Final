@@ -10,14 +10,20 @@
 		<link rel="stylesheet" href="dist/css/main.css">
 	</head>
 	<body>
-		
+		<div data-relative-input="true" id="scene">
+		  		<div class="header-1" data-depth="0.1">Internet Game Data Base</div>
+		  		<div data-depth="0.5">Search Away!</div>
+			</div>
 		<div id="app">
-			<input type="text"  name="search"  class="search-input" placeholder="Search for Game">
-			<button v-on:click="getdata">Search For Random Game</button>
-			<game-feed v-bind:game-data="gameData"></game-feed>
+			
+
+				<input type="text"  name="search"  class="search-input" placeholder="Search for Game">
+				<button>Search Game</button>
+				<button v-on:click="getdata">Search For Random Game</button>
+				<game-feed v-bind:game-data="gameData"></game-feed>
 		</div>
 
-		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script src="dist/js/genreFeed.js"></script>

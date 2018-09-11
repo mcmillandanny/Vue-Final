@@ -2,6 +2,9 @@
 
 console.log("Vue-Final");
 
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);
+
 var app = new Vue({
 	el: "#app",
 	data: {

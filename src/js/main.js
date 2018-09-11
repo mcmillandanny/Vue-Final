@@ -1,5 +1,10 @@
 console.log(`Vue-Final`);
 
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene, {
+	realtiveInput: true;
+});
+
 var app = new Vue({
 	el: "#app",
 	data: {
