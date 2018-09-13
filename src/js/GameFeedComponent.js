@@ -6,10 +6,10 @@ Vue.component('game-feed', {
     }
   },
   template: `<div>
-  				<p>{{gameData.name}}</p>
+  				<h1>{{gameData.name}}</h1>
   				<p>{{gameData.summary}}</p>
   				<p>{{gameData.rating}}</p>
-  				<img v-for="picture in gameData.screenshots" :src="picture.url.replace('t_thumb', 't_screenshot_huge')">
+  				<img v-for="picture in gameData.screenshots.slice(0,1)" :src="picture.url.replace('t_thumb', 't_screenshot_big')">
  			 </div>`
 
 })

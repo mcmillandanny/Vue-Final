@@ -7,28 +7,35 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 		<link rel="stylesheet" href="dist/css/main.css">
 	</head>
 	<body>
-		<div data-relative-input="true" id="scene">
-		  		<div class="header-1" data-depth="0.1">Internet Game Data Base</div>
-		  		<div data-depth="0.5">Search Away!</div>
+		<header>
+			<div class="header-bar">
 			</div>
-		<div id="app">
-			
-
-				<input type="text"  name="search"  class="search-input" placeholder="Search for Game">
-				<button>Search Game</button>
+		</header>
+		<div class="page-wrap">
+		<section class="hero">
+			<h1>Welcome to the Internet Game Database</h1>
+			<h2><span class="hero-line-ani">Popular </span>Games Right now</h2>
+		</section>
+		<popular-titles  id="popular-games-app" v-bind:game-titles="popularTitles"></popular-titles>
+		<div id="random-games-app">
 				<button v-on:click="getdata">Search For Random Game</button>
 				<game-feed v-bind:game-data="gameData"></game-feed>
 		</div>
+	</div>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="dist/js/showPopularTitlesComponent.js"></script>
+		<script src="dist/js/popular-games.js"></script>
 		<script src="dist/js/genreFeed.js"></script>
 		<script src="dist/js/GameFeedComponent.js"></script>
-		<script src="dist/js/main.js"></script>
+		<script src="dist/js/random-game.js"></script>
+
+		
 		
 	</body>
 </html>

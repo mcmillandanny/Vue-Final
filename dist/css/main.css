@@ -66,12 +66,104 @@ table {
 }
 
 body {
-	background: white;
+	background: #fff;
+}
+
+.page-wrap {
+	width: 1152px;
+	max-width: 100%;
+	padding: 0 20px;
 }
 
 /* 2. Content ================================= */
-.header-1 {
-	font-size: 20px;
+header .header-bar {
+	background-color: #232930;
+	width: 100%;
+	height: 50px;
+}
+
+header .header-bar input {
+	margin: 15px 0 0 10%;
+	border-radius: 5px;
+	outline: none;
+}
+
+.hero {
+	height: 80px;
+	margin-left: 10px;
+}
+
+.hero h1 {
+	text-transform: uppercase;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	font-size: 22px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-family: "Roboto", sans-serif;
+}
+
+.hero h2 {
+	text-transform: uppercase;
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-family: "Roboto", sans-serif;
+}
+
+.hero .hero-line-ani {
+	border-bottom: 1.5px #f1c40f solid;
+	padding: .5px;
+}
+
+#popular-games-app {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+#popular-games-app .popular-games {
+	margin: 10px;
+}
+
+#popular-games-app .popular-games .game-info-card {
+	font-size: 14px;
+	min-height: 50px;
+	font-family: "Poppins", sans-serif;
+	margin-bottom: 2px;
+	margin-top: 10px;
+	color: #232930;
+}
+
+#random-games-app button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	outline: none;
+	background: #232930;
+	color: white;
+	padding: 10px;
+}
+
+#random-games-app h1 {
+	text-align: center;
+	margin-bottom: 10px;
+	font-family: "Roboto", sans-serif;
+}
+
+#random-games-app p {
+	font-style: italic;
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	margin-bottom: 10px;
+}
+
+#random-games-app img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }
 
 /*# sourceMappingURL=main.css.map */

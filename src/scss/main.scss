@@ -12,6 +12,9 @@ $primary-color: #21968f;
 $secondary-color: #76d26d;
 $accent-color: #903586;
 $font-1: 'Roboto', sans-serif;
+$font-2: 'Poppins', sans-serif;;
+$main-color: #232930;
+$accent-color: #f1c40f;
 
 /* 1. Main Layout ================================= */
 
@@ -20,19 +23,121 @@ $font-1: 'Roboto', sans-serif;
 }
 
 body {
-	background: white;
+	background: #fff;
+}
+
+.page-wrap {
+	width: 1152px;
+	max-width: 100%;
+	padding: 0 20px;
 }
 
 /* 2. Content ================================= */
 
+header {
+	.header-bar {
+		background-color: $main-color;
+		width: 100%;
+		height: 50px;
 
-.header-1 {
-	font-size: 20px;
+		input {
+			margin: 15px 0 0 10%;
+			border-radius: 5px;
+			outline: none;
+		}
+	}
+}
+
+
+.hero {
+	height: 80px;
+	margin-left: 10px;
+
+	h1 {
+		text-transform: uppercase;
+		margin-top: 2%;
+		margin-bottom: 1%;
+		font-size: 22px;
+		letter-spacing: 1px;
+		font-weight: 700;
+		font-family: $font-1;
+	}
+
+	h2 {
+		text-transform: uppercase;
+		font-size: 17px;
+		letter-spacing: 1px;
+		font-weight: 700;
+		font-family: $font-1;
+	}
+
+	.hero-line-ani {
+		border-bottom: 1.5px $accent-color solid;
+		padding: .5px;
+		
+	}
+}
+
+#popular-games-app {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	.popular-games {
+		margin: 10px;
+
+		img {
+			
+		}
+
+		.game-info-card {
+			font-size: 14px;;
+			min-height: 50px;
+			font-family: $font-2;
+			margin-bottom: 2px;
+			margin-top: 10px;
+			color: $main-color;
+			
+		}
+
+	}	
+
 }
 
 
 
+#random-games-app {
 
+	button {
+		display: block;
+		margin-left: auto;
+    	margin-right: auto;
+		margin-bottom: 10px;
+		outline: none;
+		background: $main-color;
+		color: white;
+		padding: 10px;
+	}
+
+	h1 {
+		text-align: center;
+		margin-bottom: 10px;
+		font-family: $font-1;
+	}
+	p {
+		font-style: italic;
+		text-align: center;
+		font-family: $font-2;
+		margin-bottom: 10px;
+	}
+
+	img {
+		display: block;
+		margin-left: auto;
+    	margin-right: auto;
+    	width: 50%;
+
+	}
+}
 
 
 

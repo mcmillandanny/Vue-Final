@@ -1,10 +1,16 @@
-'use strict';
-
-Vue.component('genre', {
-  props: ['game-object'],
-  data: function data() {
-    return {};
-  },
-  template: '\n  \t\t\t<div>\n  \t\t\t\t<p>{{gameObject.name}}</p>\n  \t\t\t\t<p>{{gameObject.summary}}</p>\n  \t\t\t\t<p>{{gameObject.rating}}</p>\n  \t\t\t</div>\n  \t\t\t'
-});
+// Vue.component('genre', {
+// 	props: ['game-object'],
+//   data: function () {
+//     return {
+//     }
+//   },
+//   template: `
+//   			<div>
+//   				<p>{{gameObject.name}}</p>
+//   				<p>{{gameObject.summary}}</p>
+//   				<p>{{gameObject.rating}}</p>
+//   			</div>
+//   			`
+// })
+"use strict";
 //# sourceMappingURL=genreFeed.js.map
