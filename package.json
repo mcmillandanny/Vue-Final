@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "dependencies": {
     "npm": "^5.8.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "vanilla-js-carousel": "^3.1.2"
   },
   "devDependencies": {
     "axios": "^0.18.0",

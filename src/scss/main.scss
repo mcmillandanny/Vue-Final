@@ -79,28 +79,43 @@ header {
 }
 
 #popular-games-app {
-	display: flex;
-	flex-direction: row;
-	position: relative;
-	.popular-games {
-		margin: 10px;
+	width: 100%;
+	overflow-x: scroll;
 
-		img {
-			
+	.popular-games-wrapper {
+		display: flex;
+		flex-direction: row;
+		width: 22% * 10; // each game is 25% of window width, and there are 10 games
+
+		div {
+			width: 10%;
+			img {
+				width: 100%;
+			}
 		}
 
-		.game-info-card {
-			font-size: 14px;;
-			min-height: 50px;
-			font-family: $font-2;
-			margin-bottom: 2px;
-			margin-top: 10px;
-			color: $main-color;
-			
-		}
+		// .slideshow {
+		// 	position: relative;
+		// 	width: 10000px;
+		// 	height: 100%;
+		// 	overflow: scroll;
 
-	}	
+		// 	.slide {
+				
+		// 	}
+		
 
+			.game-info-card {
+				font-size: 14px;;
+				min-height: 50px;
+				font-family: $font-2;
+				margin-bottom: 2px;
+				margin-top: 10px;
+				color: $main-color;
+				
+			}
+		// }
+	}
 }
 
 

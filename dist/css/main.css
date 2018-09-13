@@ -117,16 +117,25 @@ header .header-bar input {
 }
 
 #popular-games-app {
+	width: 100%;
+	overflow-x: scroll;
+}
+
+#popular-games-app .popular-games-wrapper {
 	display: flex;
 	flex-direction: row;
-	position: relative;
+	width: 220%;
 }
 
-#popular-games-app .popular-games {
-	margin: 10px;
+#popular-games-app .popular-games-wrapper div {
+	width: 10%;
 }
 
-#popular-games-app .popular-games .game-info-card {
+#popular-games-app .popular-games-wrapper div img {
+	width: 100%;
+}
+
+#popular-games-app .popular-games-wrapper .game-info-card {
 	font-size: 14px;
 	min-height: 50px;
 	font-family: "Poppins", sans-serif;
