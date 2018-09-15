@@ -1,5 +1,5 @@
 Vue.component('game-feed', {
-	props: ['game-data'],
+  props: ['game-data'],
 
   data: function () {
     return {
@@ -7,10 +7,10 @@ Vue.component('game-feed', {
   },
   template: `
         <div>
-  				<h1>{{gameData.name}}</h1>
-  				<p>{{gameData.summary}}</p>
-  				<p>{{gameData.rating}}</p>
-  				<img v-if="gameData.screenshots"  :src="gameData.screenshots[0].url.replace('t_thumb', 't_screenshot_med')">
- 			 </div>`
+          <h1>{{gameData.name}}</h1>
+          <p>{{gameData.summary}}</p>
+          <p>{{gameData.rating}}</p>
+          <img v-if="gameData.screenshots"  :src="gameData.screenshots[0].url.replace('t_thumb', 't_screenshot_med')">
+       </div>`
 })
 

@@ -12,7 +12,10 @@
 	</head>
 	<body>
 		<header>
-			<div class="header-bar">
+			<div  id="search-app" class="header-bar">
+				<input  v-on:keyup.enter="searchGames" v-model="userSearch" name="search-bar" placeholder="Find a game" class="search">
+				<button v-on:click="searchGames" class="search-button">Search</button>
+				<game-search  class="game-search" v-bind:searched-games="searchedGames"></game-search>
 			</div>
 		</header>
 		<div class="page-wrap">
@@ -26,15 +29,17 @@
 			<game-feed v-bind:game-data="gameData"></game-feed>
 		</div>
 	</div>
-
-		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="dist/js/searchedGamesComponent.js"></script>
+		<script src="dist/js/main.js"></script>
 		<script src="dist/js/showPopularTitlesComponent.js"></script>
 		<script src="dist/js/popular-games.js"></script>
 		<script src="dist/js/genreFeed.js"></script>
 		<script src="dist/js/GameFeedComponent.js"></script>
 		<script src="dist/js/random-game.js"></script>
-		<script src="dist/js/main.js"></script>
+	
+		
 
 		
 		
