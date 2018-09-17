@@ -7,8 +7,7 @@ var app = new Vue({
 	data: {
 		userSearch: "",
 		searchedGames: [],
-		isOpen: false,
-		
+		isOpen: false
 	},
 	methods: {
 		searchGames: function() {
@@ -18,9 +17,10 @@ var app = new Vue({
 			axios
 				.get(SEARCH_GAME)
 				.then((response) => {
-				console.log(response.data)
-				this.searchedGames = response.data[0];
-				this.userSearch = "";
+					console.log(response.data)
+					this.searchedGames = response.data[0];
+					this.userSearch = "";
+					this.isOpen = true;
 				})
 				.catch((error) => {
 					console.warn("not working", error);

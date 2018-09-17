@@ -3,6 +3,7 @@ var app = new Vue({
 	el: "#random-games-app",
 	data: {
 		gameData: [],
+
 	},
 	methods: {
 		getdata: function() {

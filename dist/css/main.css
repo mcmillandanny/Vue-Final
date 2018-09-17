@@ -69,12 +69,6 @@ body {
 	background: #fff;
 }
 
-.page-wrap {
-	width: 1152px;
-	max-width: 100%;
-	padding: 0 20px;
-}
-
 /* 2. Content ================================= */
 header .header-bar {
 	background-color: #232930;
@@ -102,6 +96,7 @@ header .header-bar .popupBox {
 }
 
 header .header-bar .popupBox h1 {
+	color: white;
 	text-align: center;
 	padding-top: 20px;
 	font-size: 30px;
@@ -111,12 +106,22 @@ header .header-bar .popupBox h1 {
 
 header .header-bar .popupBox img {
 	padding: 20px;
-	margin-left: 23%;
+	margin-left: 25%;
 	width: 50%;
 }
 
-header .header-bar .isOpen {
+header .header-bar .popupBox {
+	display: none;
+}
+
+header .header-bar .popupBoxVisible {
 	display: block;
+}
+
+header .header-bar .close-button {
+	float: right;
+	padding: 5px;
+	z-index: 10;
 }
 
 section {

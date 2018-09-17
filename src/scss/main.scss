@@ -26,12 +26,7 @@ body {
 	background: #fff;
 }
 
-.page-wrap {
-	width: 1152px;
-	max-width: 100%;
-	padding: 0 20px;
 
-}
 
 /* 2. Content ================================= */
 
@@ -63,6 +58,7 @@ header {
 			box-shadow: 2px 2px 5px 12px rgba(0,0,0,0.75);
 
     		h1 {
+    			color: white;	
     			text-align: center;
     			padding-top: 20px;
     			font-size: 30px;
@@ -72,17 +68,26 @@ header {
 
     		img {
     			padding: 20px;
-    			margin-left: 23%;
+    			margin-left: 25%;
     			width: 50%;
 	    		
     		}
     		    		
 		}
 
-		.isOpen {
+		.popupBox {
+			display: none;
+		}
+
+		.popupBoxVisible {
 			display: block;
 		}
 
+		.close-button {
+			float: right;
+			padding: 5px;
+			z-index: 10;
+		}
 
 	
 	}

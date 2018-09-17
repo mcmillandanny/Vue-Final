@@ -10,7 +10,6 @@ var app = new Vue({
 		userSearch: "",
 		searchedGames: [],
 		isOpen: false
-
 	},
 	methods: {
 		searchGames: function searchGames() {
@@ -22,6 +21,7 @@ var app = new Vue({
 				console.log(response.data);
 				_this.searchedGames = response.data[0];
 				_this.userSearch = "";
+				_this.isOpen = true;
 			}).catch(function (error) {
 				console.warn("not working", error);
 			});

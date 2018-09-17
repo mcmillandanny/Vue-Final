@@ -6,6 +6,6 @@ Vue.component('game-feed', {
   data: function data() {
     return {};
   },
-  template: '\n        <div>\n          <h1>{{gameData.name}}</h1>\n          <p>{{gameData.summary}}</p>\n          <p>{{gameData.rating}}</p>\n          <img v-if="gameData.screenshots"  :src="gameData.screenshots[0].url.replace(\'t_thumb\', \'t_screenshot_med\')">\n       </div>'
+  template: '\n        <div>\n          <h1>{{gameData.name}}</h1>\n          <p>{{gameData.summary}}</p>\n          <img v-if="gameData.screenshots"  :src="gameData.screenshots[0].url.replace(\'t_thumb\', \'t_screenshot_med\')">\n       </div>'
 });
 //# sourceMappingURL=GameFeedComponent.js.map
