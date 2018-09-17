@@ -88,6 +88,41 @@ header .header-bar input {
 	outline: none;
 }
 
+header .header-bar .popupBox {
+	width: 800px;
+	height: 350px;
+	background: #232930;
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 10;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 2px 2px 5px 12px rgba(0, 0, 0, 0.75);
+}
+
+header .header-bar .popupBox h1 {
+	text-align: center;
+	padding-top: 20px;
+	font-size: 30px;
+	border-bottom: 1px solid white;
+	padding-bottom: 10px;
+}
+
+header .header-bar .popupBox img {
+	padding: 20px;
+	margin-left: 23%;
+	width: 50%;
+}
+
+header .header-bar .isOpen {
+	display: block;
+}
+
+section {
+	z-index: 0;
+}
+
 .hero {
 	height: 80px;
 	margin-left: 10px;
@@ -101,6 +136,11 @@ header .header-bar input {
 	letter-spacing: 1px;
 	font-weight: 700;
 	font-family: "Roboto", sans-serif;
+	z-index: -10;
+}
+
+.hero h1 .h1-hero {
+	z-index: -10;
 }
 
 .hero h2 {
@@ -119,6 +159,7 @@ header .header-bar input {
 #popular-games-app {
 	width: 100%;
 	overflow-x: scroll;
+	z-index: -10;
 }
 
 #popular-games-app .popular-games-wrapper {
@@ -129,6 +170,7 @@ header .header-bar input {
 
 #popular-games-app .popular-games-wrapper div {
 	width: 10%;
+	z-index: -1;
 }
 
 #popular-games-app .popular-games-wrapper div img {
@@ -142,6 +184,10 @@ header .header-bar input {
 	margin-bottom: 2px;
 	margin-top: 10px;
 	color: #232930;
+}
+
+#random-games-app {
+	z-index: -11;
 }
 
 #random-games-app button {

@@ -12,15 +12,17 @@
 	</head>
 	<body>
 		<header>
-			<div  id="search-app" class="header-bar">
+			<div id="search-app" class="header-bar">
 				<input  v-on:keyup.enter="searchGames" v-model="userSearch" name="search-bar" placeholder="Find a game" class="search">
 				<button v-on:click="searchGames" class="search-button">Search</button>
-				<game-search  class="game-search" v-bind:searched-games="searchedGames"></game-search>
+				<div class="popupBox" v-bind:class="{popupBox: isOpen}" v-on:click="isOpen = !isOpen">
+					<game-search  class="game-search" v-bind:searched-games="searchedGames"></game-search>
+				</div>
 			</div>
 		</header>
 		<div class="page-wrap">
 		<section class="hero">
-			<h1>Welcome to the Internet Game Database</h1>
+			<h1 class="h1-hero">Welcome to the Internet Game Database</h1>
 			<h2><span class="hero-line-ani">Popular </span>Games Right now</h2>
 		</section>
 		<popular-titles id="popular-games-app" v-bind:game-titles="popularTitles"></popular-titles>

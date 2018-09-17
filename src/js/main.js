@@ -7,19 +7,19 @@ var app = new Vue({
 	data: {
 		userSearch: "",
 		searchedGames: [],
+		isOpen: false,
 		
 	},
 	methods: {
 		searchGames: function() {
-			
 			console.log('this was searched ' + this.userSearch);
 			const SEARCH_GAME = (`http://circuslabs.net/proxies/igdb/` +
-			`?user-key=91cfde4de28e4fb338abbedd15dc86b5&endpoint=/games/?search=` + this.userSearch + `&fields=name,summary`);
+			`?user-key=91cfde4de28e4fb338abbedd15dc86b5&endpoint=/games/?search=` + this.userSearch + `&fields=name,screenshots`);
 			axios
 				.get(SEARCH_GAME)
 				.then((response) => {
 				console.log(response.data)
-				this.searchedGames = response.data[0].name;
+				this.searchedGames = response.data[0];
 				this.userSearch = "";
 				})
 				.catch((error) => {

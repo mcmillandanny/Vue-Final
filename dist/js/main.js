@@ -8,7 +8,8 @@ var app = new Vue({
 	el: "#search-app",
 	data: {
 		userSearch: "",
-		searchedGames: []
+		searchedGames: [],
+		isOpen: false
 
 	},
 	methods: {
@@ -16,10 +17,10 @@ var app = new Vue({
 			var _this = this;
 
 			console.log('this was searched ' + this.userSearch);
-			var SEARCH_GAME = 'http://circuslabs.net/proxies/igdb/' + '?user-key=91cfde4de28e4fb338abbedd15dc86b5&endpoint=/games/?search=' + this.userSearch + '&fields=name,summary';
+			var SEARCH_GAME = 'http://circuslabs.net/proxies/igdb/' + '?user-key=91cfde4de28e4fb338abbedd15dc86b5&endpoint=/games/?search=' + this.userSearch + '&fields=name,screenshots';
 			axios.get(SEARCH_GAME).then(function (response) {
 				console.log(response.data);
-				_this.searchedGames = response.data[0].name;
+				_this.searchedGames = response.data[0];
 				_this.userSearch = "";
 			}).catch(function (error) {
 				console.warn("not working", error);

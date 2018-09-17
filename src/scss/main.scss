@@ -30,11 +30,13 @@ body {
 	width: 1152px;
 	max-width: 100%;
 	padding: 0 20px;
+
 }
 
 /* 2. Content ================================= */
 
 header {
+
 	.header-bar {
 		background-color: $main-color;
 		width: 100%;
@@ -47,23 +49,53 @@ header {
 		}
 
 		button {
+		}
+		.popupBox { 
+			width: 800px;
+			height: 350px;
+			background: $main-color;
+			margin-top: 90px;
+			margin-left: auto;
+    		margin-right: auto;
+    		z-index: 10;
+    		-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+			box-shadow: 2px 2px 5px 12px rgba(0,0,0,0.75);
 
+    		h1 {
+    			text-align: center;
+    			padding-top: 20px;
+    			font-size: 30px;
+    			border-bottom: 1px solid white;
+    			padding-bottom: 10px;
+    		}
+
+    		img {
+    			padding: 20px;
+    			margin-left: 23%;
+    			width: 50%;
+	    		
+    		}
+    		    		
 		}
 
-		// .game-search {
-		// 	p {
-		// 		font-size: 100px;
-		// 		color: red;
-		// 		text-align: center;
-		// 	}
-		// }
+		.isOpen {
+			display: block;
+		}
+
+
+	
 	}
 }
 
-
+section {
+	z-index: 0;
+}
 .hero {
 	height: 80px;
 	margin-left: 10px;
+
+	
 
 	h1 {
 		text-transform: uppercase;
@@ -73,6 +105,12 @@ header {
 		letter-spacing: 1px;
 		font-weight: 700;
 		font-family: $font-1;
+		z-index: -10;
+
+		.h1-hero {
+			z-index: -10;
+		}
+
 	}
 
 	h2 {
@@ -93,16 +131,18 @@ header {
 #popular-games-app {
 	width: 100%;
 	overflow-x: scroll;
+	z-index: -10;
 
 	.popular-games-wrapper {
 		display: flex;
 		flex-direction: row;
 		width: 22% * 10; // each game is 25% of window width, and there are 10 games
-
 		div {
 			width: 10%;
+			z-index: -1;
 			img {
 				width: 100%;
+			
 			}
 		}
 
@@ -133,7 +173,7 @@ header {
 
 
 #random-games-app {
-
+	z-index: -11;
 	button {
 		display: block;
 		margin-left: auto;
